@@ -1,8 +1,8 @@
 #ifndef MATRIX_HPP
 #define MATRIX_HPP
 #include <cstddef>
-void destroy(int **, size_t);
-int ** create(size_t, size_t);
-void input(int **, size_t , size_t);
-void out(const int * const *, size_t, size_t);
+void destroy(int ** t, size_t m);
+int ** create(size_t m, size_t n);
+void input(int ** t, size_t m, size_t n);
+void out(const int * const * t, size_t m, size_t n);
 #endif
