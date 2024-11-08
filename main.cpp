@@ -7,14 +7,10 @@ int main() {
   if (!std::cin) {
     return 1;
   }
-  int ** t = nullptr;
-  try {
-    t = create(M, N);
-  } catch (const std::bad_alloc & e) {
-    std::cerr << "Out of memory\n";
+  Matrix mtx(m, n);
+  mtx.input(std::cin);
+  if (!std::cin) {
     return 1;
   }
-  input(t, M, N);
-  out(t, M, N);
-  destroy(t, M);
+  mtx.output(std::cout);
 }
